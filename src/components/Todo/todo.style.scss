@@ -1,0 +1,17 @@
+.Todo {
+    background-color: #ff7649;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin: 5px 0;
+}
+
+.title {
+    cursor: pointer;
+}
+
+.close-btn {
+    cursor: pointer;
+}

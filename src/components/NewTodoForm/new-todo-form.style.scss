@@ -1,0 +1,19 @@
+.input-container {
+    width: 100%;
+    display: flex;
+
+    input {
+        flex: 2;
+        padding: 12px;
+        border: none;
+    }
+
+    button {
+        // font-size: 8px;
+        padding: .8rem;
+        color: #fff;
+        background-color: #73CF14;
+        border: none;
+        cursor: pointer;
+    }
+}
