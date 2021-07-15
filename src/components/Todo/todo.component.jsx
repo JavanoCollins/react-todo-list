@@ -4,15 +4,14 @@ import "./todo.style.scss";
 
 import { v4 as uuidv4 } from "uuid";
 
-function Todo({ title, removeItem, id })
-{
-    const [check, setCheck] = useState(false)
+function Todo({ title, removeItem, id }) {
+    const [check, setCheck] = useState(false);
 
     const checkItem = () => {
         setCheck((prevState) => {
-            return !prevState
-        })
-    }
+            return !prevState;
+        });
+    };
     return (
         <div className="Todo">
             <p
@@ -27,6 +26,7 @@ function Todo({ title, removeItem, id })
             <p className="close-btn" onClick={() => removeItem(id)}>
                 X
             </p>
+            <p>Edit</p>
         </div>
     );
 }
