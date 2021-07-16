@@ -12,6 +12,73 @@
     cursor: pointer;
 }
 
+.Todo button {
+    width: 35px;
+    border: none;
+    padding: 5px;
+    color: white;
+}
+
 .close-btn {
     cursor: pointer;
+    background-color: red;
 }
+
+.edit-btn {
+    background-color: #73cf14;
+}
+
+.edit-form {
+    display: flex;
+}
+
+.edit-form button {
+    width: 35px;
+    border: none;
+    padding: 5px;
+    color: white;
+}
+
+.edit-task {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #f8bca8;
+    border: none;
+    color: rgb(0, 0, 0);
+}
+
+.edit-btns {
+    display: flex;
+
+    button {
+        height: 100%;
+        cursor: pointer;
+    }
+}
+
+.edit-save-btn {
+    background-color: #73cf14;
+    width: 50px;
+}
+
+.edit-cancel-btn {
+    background-color: red;
+}
+
+// .TodoList {
+//     width: 100%;
+//     padding: 12px 24px;
+//     background-color: #ff561e;
+
+//     h1 {
+//         color: #fff;
+//     }
+
+//     p{
+//         color: #fff;
+//     }
+
+//     .subtitle {
+//         margin-bottom: 2rem;
+//     }
+// }

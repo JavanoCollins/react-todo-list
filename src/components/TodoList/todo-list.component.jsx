@@ -9,7 +9,7 @@ import Todo from "../Todo/todo.component";
 const ACTIONS = {
     REMOVE_TODO: "REMOVE_TODO",
     ADD_TODO: "ADD_TODO",
-    CHECK_ITEM: "CHECK_ITEM",
+    UPDATE_TODO: "UPDATE_TODO",
 };
 
 const todoListReducer = (state, action) => {
@@ -24,6 +24,19 @@ const todoListReducer = (state, action) => {
                 ...state,
                 todos: state.todos.filter((todo) => todo.id !== action.id),
             };
+        case ACTIONS.UPDATE_TODO:
+            const updatedTodos = state.todos.map((todo) => {
+                if (todo.id === action.id) {
+                    return { ...todo, title: action.updatedTodo };
+                }
+                console.log(todo);
+                return todo;
+            });
+            return {
+                ...state,
+                todos: updatedTodos
+            }
+
         default:
             return state;
     }
@@ -46,6 +59,10 @@ function TodoList() {
         dispatch({ type: ACTIONS.REMOVE_TODO, id });
     };
 
+    const updateItem = (id, updatedTodo) => {
+        dispatch({type: ACTIONS.UPDATE_TODO, id, updatedTodo})
+    };
+
     return (
         <div className="TodoList">
             <h1>Todo List</h1>
@@ -54,9 +71,10 @@ function TodoList() {
                 return (
                     <Todo
                         key={todo.id}
+                        id={todo.id}
                         title={todo.title}
                         removeItem={removeItem}
-                        id={todo.id}
+                        updateItem={updateItem}
                     />
                 );
             })}
